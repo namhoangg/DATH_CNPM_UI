@@ -8,15 +8,10 @@ db = SQLAlchemy()
 def create_app():
     app = Flask(__name__)
 
-    #app configuration
     app.config['SECRET_KEY'] = 'abc'
     app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:Longvu123@localhost/e_grocery'
-    ##############################
 
-    #init the database with app 
     db.init_app(app)
-    ##############################
-
 
     from .views import views
     from .auth import auth
