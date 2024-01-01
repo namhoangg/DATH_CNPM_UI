@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles-grid-view.css') }}">
+    <title>Grid-view</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.jpg" alt="E-Grocery" height="30">
+            E-Grocery
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Search">
+            <select>
+                <option value="all">All Categories</option>
+                <!-- Add more categories here -->
+            </select>
+            <button type="submit">Search 😎</button>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">🤵 Profile</a></li>
+            <li><a href="#">✉ Messages</a></li>
+            <li><a href="#">♥️ Orders</a></li>
+            <li><a href="#">️🛒 My Cart</a></li>
+        </ul>
+    </header>
+
+     <nav class="navbar">
+        <div class="navbar-left">
+            <div class="menu-icon">☰ All category</div>
+            <ul>
+                <li><a href="#">🔥 Hot offers</a></li>
+                <li>
+                    <select>
+                        <option value="help">Help</option>
+                        <!-- Add more options here -->
+                    </select>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar-right">
+            <select>
+                <option>Vietnam, VND</option>
+                <!-- Add more countries/currencies here -->
+            </select>
+            <select>
+                <option>Ship to</option>
+                <!-- Add more shipping options here -->
+            </select>
+        </div>
+    </nav>
+
+    
+    <div class="filter-container">
+        <select id="brand" name="brand">
+            <option value="" disabled selected>Hãng</option>
+            <option value="all">All Brands</option>
+            <option value="apple">Apple</option>
+            <option value="samsung">Samsung</option>
+            <!-- Add more brands here -->
+        </select>
+
+        <select id="price" name="price">
+            <option value="" disabled selected>Giá</option>
+            <option value="all">All Prices</option>
+            <option value="0-5">Under 5M</option>
+            <option value="5-10">5M to 10M</option>
+            <!-- Add more price ranges here -->
+        </select>
+
+        <!-- Add more selection boxes as needed -->
+    </div>
+
+    <div class="layout-container"> <!-- Flex container for sidebar + main content -->
+        <aside class="sidebar">
+            <h3>Category</h3>
+            <ul>
+                <li>Mobile accessory</li>
+                <li>Electronics</li>
+                <li>Smartphones</li>
+                <li>Modern tech</li>
+                <li><a href="#" class="see-all">See all</a></li>
+            </ul>
+            <h3>Brands</h3>
+            <ul>
+                <li><label><input type="checkbox" checked> Samsung</label></li>
+                <li><label><input type="checkbox"> Apple</label></li>
+                <li><label><input type="checkbox"> Huawei</label></li>
+                <li><label><input type="checkbox" checked> Pocco</label></li>
+                <li><label><input type="checkbox"> Lenovo</label></li>
+                <li><a href="#" class="see-all">See all</a></li>
+            </ul>
+            <h3>Features</h3>
+            <ul>
+                <li><label><input type="checkbox" checked> Metallic</label></li>
+                <li><label><input type="checkbox"> Plastic cover</label></li>
+                <li><label><input type="checkbox"> 8GB Ram</label></li>
+                <li><label><input type="checkbox"> Super power</label></li>
+                <li><label><input type="checkbox"> Large Memory</label></li>
+                <li><a href="#" class="see-all">See all</a></li>
+            </ul>
+            <!-- Repeat for other sections like Price range, Condition, etc. -->
+        </aside>
+
+        <div class="container">
+            <div class="card">
+                <h3>iPhone 15</h3>
+                <br>
+                <img src="iphone-15.jpg" alt="iPhone 15">
+                <p>Giá: 34.990.000₫</p>
+            </div>
+            <div class="card">
+                <h3>iPhone 15 Pro Max</h3>
+                <br>
+                <img src="iphone-15-pro-max.jpg" alt="iPhone 15 Pro Max">
+                <p>Giá: 25.990.000₫</p>
+            </div>
+            <div class="card">
+                <h3>iPhone 15 Plus</h3>
+                <br>
+                <img src="iphone-15-plus.jpg" alt="iPhone 15 Plus">
+                <p>Giá: 22.990.000₫</p>
+            </div>
+            <div class="card">
+                <h3>iPhone 15</h3>
+                <br>
+                <img src="iphone-15.jpg" alt="iPhone 15">
+                <p>Giá: 34.990.000₫</p>
+            </div>
+            <!-- Add more cards for other products here -->
+        </div>
+    </div>
+</body>
+</html>

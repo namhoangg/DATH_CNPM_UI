@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles-web-detail.css') }}">
+    <title>Web-detail</title>
+
+</head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="logo.jpg" alt="E-Grocery" height="30">
+                E-Grocery
+            </div>
+            <div class="search-container">
+                <input type="text" placeholder="Search">
+                <select>
+                    <option value="all">All Categories</option>
+                    <!-- Add more categories here -->
+                </select>
+                <button type="submit">Search 😎</button>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">🤵 Profile</a></li>
+                <li><a href="#">✉ Messages</a></li>
+                <li><a href="#">♥️ Orders</a></li>
+                <li><a href="#">️🛒 My Cart</a></li>
+            </ul>
+        </header>
+
+        <nav class="navbar">
+            <div class="navbar-left">
+                <div class="menu-icon">☰ All category</div>
+                <ul>
+                    <li><a href="#">🔥 Hot offers</a></li>
+                    <li>
+                        <select>
+                            <option value="help">Help</option>
+                            <!-- Add more options here -->
+                        </select>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar-right">
+                <select>
+                    <option>Vietnam, VND</option>
+                    <!-- Add more countries/currencies here -->
+                </select>
+                <select>
+                    <option>Ship to</option>
+                    <!-- Add more shipping options here -->
+                </select>
+            </div>
+        </nav>
+
+        <div class="product-container">
+            <div class="image-gallery">
+              <div class="main-image" id="mainImage">
+                <img src="t-shirt.jpg" alt="Product Image">
+              </div>
+              <div class="thumbnail" onclick="changeImage('t-shirt.jpg')">
+                <img src="t-shirt.jpg" alt="Thumbnail 1">
+              </div>
+              <div class="thumbnail" onclick="changeImage('t-shirt2.jpg')">
+                <img src="t-shirt2.jpg" alt="Thumbnail 1">
+              </div>
+              <div class="thumbnail" onclick="changeImage('t-shirt3.jpg')">
+                <img src="t-shirt3.jpg" alt="Thumbnail 2">
+              </div>
+              <!-- Add more thumbnails as needed -->
+            </div>
+            <div class="product-info">
+            <div class="product-title">Mens Long Sleeve T-shirt Cotton Base Layer Slim Muscle</div>
+            <div class="product-price">$98.00 - $78.00</div>
+            <div class="product-rating">Rating: 9.3</div>
+            </div>
+            <div class="product-details">
+                <div class="detail-item">
+                  <strong>Price:</strong> <span>Negotiable</span>
+                </div>
+                <div class="detail-item">
+                  <strong>Type:</strong> <span>Classic shoes</span>
+                </div>
+                <div class="detail-item">
+                  <strong>Material:</strong> <span>Plastic material</span>
+                </div>
+                <div class="detail-item">
+                  <strong>Design:</strong> <span>Modern nice</span>
+                </div>
+                <div class="detail-item">
+                  <strong>Customization:</strong> <span>Customized logo and design custom packages</span>
+                </div>
+                <div class="detail-item">
+                  <strong>Protection:</strong> <span>Refund Policy</span>
+                </div>
+                <div class="detail-item">
+                  <strong>Warranty:</strong> <span>2 years full warranty</span>
+                </div>
+              </div>
+        </div>
+
+        <div class="tab-container">
+            <ul class="tab-menu">
+              <li class="active">Description</li>
+              <li>Reviews</li>
+              <li>Shipping</li>
+              <li>About seller</li>
+            </ul>
+            <div class="tab-content">
+              <p>Embrace casual comfort with our premium cotton T-shirt, designed for those who appreciate
+                simplicity paired with style. This classic piece features a soft, breathable
+                fabric that promises all-day ease and a fit that's neither too snug nor too 
+                loose. Its versatile heather gray shade serves as a perfect canvas for any 
+                ensemble, whether layered under a denim jacket or worn solo to showcase its 
+                subtle finesse. The T-shirt's durable ribbed crew neck and double-stitched 
+                hem ensure it stands up to the rigors of daily wear while maintaining its
+                shape. With a slight stretch for mobility, it's an ideal choice for a 
+                leisurely day out or a relaxed evening in. This isn't just a T-shirt; 
+                it's a staple of effortless dressing, a testament to understated elegance.</p>
+              <table class="styled-table">
+                <thead>
+                  <tr>
+                    <th>Model</th>
+                    <th>#8786867</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Style</td>
+                    <td>Classic style</td>
+                  </tr>
+                  <tr>
+                    <td>Certificate</td>
+                    <td>ISO-898921212</td>
+                  </tr>
+                  <tr>
+                    <td>Size</td>
+                    <td>34mm x 450mm x 19mm</td>
+                  </tr>
+                  <tr>
+                    <td>Memory</td>
+                    <td>36GB RAM</td>
+                  </tr>
+                </tbody>
+              </table>
+              <ul class="feature-list">
+                <li>Some great feature name here</li>
+                <li>Lorem ipsum dolor sit amet, consectetur</li>
+                <li>Duis aute irure dolor in reprehenderit</li>
+                <li>Some great feature name here</li>
+              </ul>
+            </div>
+        </div>
+
+        <script>
+            function changeImage(src) {
+              document.getElementById('mainImage').getElementsByTagName('img')[0].src = src;
+            }
+          </script>
+    </body>
+</html>
