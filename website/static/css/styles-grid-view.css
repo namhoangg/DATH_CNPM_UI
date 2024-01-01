@@ -1,0 +1,224 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #e7e7e7;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: #0000FF;
+}
+.logo img {
+    margin-right: 10px;
+    width: 100px;
+    height: 90px;
+}
+.search-container {
+    display: flex;
+}
+.search-container input[type="text"] {
+    padding: 5px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.search-container select {
+    padding: 5px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.search-container button {
+    padding: 5px 10px;
+    background-color: #0000FF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+.nav-links li {
+    padding: 0 10px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+.navbar-left .menu-icon {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 20px; /* Adjust spacing between icon and first button */
+}
+.navbar-left ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.navbar-left ul li {
+    padding: 0 10px;
+}
+.navbar-left ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px; /* Optional: add padding for clickable area */
+    border: 1px solid transparent; /* Optional: for visible feedback when hovering */
+}
+.navbar-left ul li a:hover {
+    border-color: #ccc; /* Optional: change border color on hover */
+}
+.navbar-right select {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-right: 10px; /* Adjust spacing between selects */
+}
+.navbar-right .flag-icon {
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
+}
+
+
+.sidebar {
+    flex: 0 0 250px; /* Sidebar width */
+    width: 250px; /* Adjust the width as needed */
+    background-color: #f9f9f9; /* Light grey background */
+    padding: 20px;
+    border-right: 1px solid #ddd; /* Add a right border */
+}
+.sidebar h3 {
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd; /* Section separator */
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+.sidebar ul li {
+    padding: 5px 0;
+}
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+}
+.sidebar label {
+    display: block;
+    margin-bottom: 5px;
+}
+.sidebar input[type="checkbox"] {
+    margin-right: 5px;
+}
+.sidebar select {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+}
+.see-all {
+    color: blue;
+    cursor: pointer;
+}
+
+
+/* Flex container for sidebar and main content */
+.layout-container {
+    display: flex;
+}
+
+/* Main content area with adjusted width */
+.main-content {
+    flex-grow: 1; /* Takes up the remaining space */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust minmax for your card size */
+    grid-gap: 20px;
+    padding: 20px;
+}
+/* Adjustments to card image sizes if needed */
+.card img {
+    max-width: 100%; /* Ensures image is contained within the card */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the card area while maintaining aspect ratio */
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+    align-items: start;
+}
+.card {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px black;
+}
+.card h3 {
+    margin: 0;
+}
+.card img {
+    width: 100%; /* This will make the image fill the card width */
+    height: 300px; /* This will maintain the aspect ratio */
+    object-fit: contain; /* This will ensure the image covers the area without stretching */
+    object-position: center; /* This centers the image within the element */
+}
+.filter-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f1f1f1;
+}
+select {
+    width: auto;
+    min-width: 120px;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+}
+/* Optional: style the dropdown arrow */
+select {
+    -webkit-appearance: none;  /* Remove default arrow on WebKit browsers */
+    -moz-appearance: none;     /* Remove default arrow on Mozilla Firefox */
+    appearance: none;          /* Remove default arrow on most browsers */
+    background: url('dropdown-arrow.png') no-repeat right; /* Add custom arrow */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="black" d="M7 10l5 5 5-5z"/></svg>');
+    background-position: right;
+    background-size: 25px; /* Size of custom arrow */
+    padding-right: auto; /* Adjust padding to fit custom arrow */
+}
+.filter-label {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
