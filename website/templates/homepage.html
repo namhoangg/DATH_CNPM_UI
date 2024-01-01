@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../static/css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-wrap">
+          <div class="web-brief-desc-title">
+            <div class="web-brief-logo">
+              <img
+                class="logo-1"
+                src="../static//images//brief-icon-1.svg"
+                alt="brief-icon-1"
+              />
+              <img
+                class="logo-2"
+                src="../static//images//brief-icon-2.svg"
+                alt="brief-icon-2"
+              />
+              <div class="logo-3-wrap">
+                <img
+                  class="logo-3"
+                  src="../static//images//brief-icon-3.svg"
+                  alt="brief-icon-3"
+                />
+              </div>
+            </div>
+
+            <span style="color: #8cb7f5"> E-grocery</span>
+          </div>
+          <div class="header-search">
+            <form action="#">
+              <div class="search">
+                <input name="keyword" type="text" placeholder="Search" />
+              </div>
+              <div class="categories">
+                <select name="category">
+                  <option value="all">All category</option>
+                  <option value="vegetables">Vegetables</option>
+                  <option value="fruits">Fruits</option>
+                  <option value="meat">Meat</option>
+                  <option value="seafood">Seafood</option>
+                  <option value="dairy">Dairy</option>
+                </select>
+              </div>
+              <div class="search-submit">
+                <button type="submit">Search</button>
+              </div>
+            </form>
+          </div>
+          <div class="header-action">
+            <div class="action-item">
+              <img src="../static//images//profile.svg" alt="profile" />
+              <span>Profile</span>
+            </div>
+            <div class="action-item">
+              <img src="../static//images//message.svg" alt="message" />
+              <span>Message</span>
+            </div>
+            <div class="action-item">
+              <img src="../static//images//order.svg" alt="Orders" />
+              <span>Orders</span>
+            </div>
+            <div class="action-item">
+              <img src="../static//images//cart.svg" alt="Cart" />
+              <span>My cart</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <hr class="border" />
+    <div class="nav-bar">
+      <div class="container">
+        <div class="nav-bar-wrap">
+          <div class="nav-left">
+            <div class="nav-icon">
+              <img src="../static//images//navbar.svg" alt="navbar" />
+            </div>
+            <div class="nav-category">
+              <span>All category</span>
+            </div>
+            <div class="nav-hot">
+              <span>Hot offers</span>
+            </div>
+            <div class="nav-select">
+              <select>
+                <option value="Help">Help</option>
+              </select>
+            </div>
+          </div>
+          <div class="nav-payment">
+            <div class="nav-payment-current">Vietnam, VND</div>
+            <div class="nav-payment-icon">
+              <img src="../static//images//icon-down.svg" alt="down" />
+            </div>
+          </div>
+          <div class="nav-location">
+            <div class="nav-location-address">
+              <span>Ship to</span>
+              <img src="../static//images//vn-flag.svg" alt="vn-flag" />
+            </div>
+            <div class="nav-payment-icon">
+              <img src="../static//images//icon-down.svg" alt="down" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="border" />
+    <div class="section-main">
+      <div class="container">
+        <div class="bg-card">
+          <div class="main-left">
+            <div class="main-left-item active">
+              <span class="active">Automobiles</span>
+            </div>
+            <div class="main-left-item">
+              <span>Clothes and wear</span>
+            </div>
+            <div class="main-left-item">
+              <span>Home interior</span>
+            </div>
+            <div class="main-left-item">
+              <span>8-bit</span>
+            </div>
+            <div class="main-left-item">
+              <span>Team fight tactics</span>
+            </div>
+            <div class="main-left-item">
+              <span>Old tranford seats</span>
+            </div>
+            <div class="main-left-item">
+              <span>Fruits</span>
+            </div>
+            <div class="main-left-item">
+              <span>Water</span>
+            </div>
+            <div class="main-left-item">
+              <span>Phone</span>
+            </div>
+          </div>
+          <div class="main">
+            <img src="../static//images//section-main.png" alt="section-main" />
+            <div class="main-text">
+              <span>Lastest trending</span>
+              <strong>Electronic items</strong>
+              <button class="main-button">Learn more</button>
+            </div>
+          </div>
+          <div class="main-right">
+            <div class="main-right-user">
+                {% if session['user_name'] %}
+                    <!-- User is logged in -->
+                    <div class="user-header">
+                        <div class="user-avatar">
+                            <img src="../static/images/avatar.svg" alt="avatar" />
+                        </div>
+                        <div class="user-greeting">
+                            <span>Hi, {{ session['user_name'] }}<br />Let's get started</span>
+                        </div>
+                    </div>
+                    <div class="user-login">
+                        <button onclick="window.location.href='/logout'">Log out</button>
+                    </div>
+                {% else %}
+                    <div class="user-header">
+                        <div class="user-avatar">
+                        <img src="../static//images/avatar.svg" alt="avatar" />
+                        </div>
+                        <div class="user-greeting">
+                        <span>Hi,<br />Let's get started</span>
+                        </div>
+                    </div>
+                    <div class="user-register">
+                        <button>Join now</button>
+                    </div>
+                    <div class="user-login">
+                        <button onclick="window.location.href='/login'" >Login</button>
+                    </div>
+                {% endif %}
+            </div>
+            <div class="main-right-suggest">
+              <span>Get US 200,000<br />VND off with a <br />new supplier</span>
+            </div>
+            <div class="main-right-action">
+              <span>Send quotes with<br />supplier<br />preferences</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-sale">
+      <div class="container">
+        <div class="bg-card">
+          <div class="sale-countdown">
+            <span class="sale-countdown-title">Deals and offers</span>
+            <span class="sale-countdown-desc">Hygiene equiments</span>
+            <div class="sale-countdown-time">
+              <div class="time-item">
+                <span class="time-number">04</span>
+                <span class="time-current">Days</span>
+              </div>
+              <div class="time-item">
+                <span class="time-number">13</span>
+                <span class="time-current">Hours</span>
+              </div>
+              <div class="time-item">
+                <span class="time-number">34</span>
+                <span class="time-current">Min</span>
+              </div>
+              <div class="time-item">
+                <span class="time-number">56</span>
+                <span class="time-current">Sec</span>
+              </div>
+            </div>
+          </div>
+          <div class="sale-item">
+            <div class="sale-image">
+              <img src="../static//images/watch.png" alt="watch" />
+            </div>
+            <div class="sale-title">
+              <span>Smart watches</span>
+            </div>
+            <div class="sale-percent">
+              <span>-25%</span>
+            </div>
+          </div>
+          <div class="sale-item">
+            <div class="sale-image">
+              <img src="../static//images/laptop.png" alt="watch" />
+            </div>
+            <div class="sale-title">
+              <span>Laptops</span>
+            </div>
+            <div class="sale-percent">
+              <span>-15%</span>
+            </div>
+          </div>
+          <div class="sale-item">
+            <div class="sale-image">
+              <img src="../static//images/camera.png" alt="watch" />
+            </div>
+            <div class="sale-title">
+              <span>GoPro cameras</span>
+            </div>
+            <div class="sale-percent">
+              <span>-40%</span>
+            </div>
+          </div>
+          <div class="sale-item">
+            <div class="sale-image">
+              <img src="../static//images/headphone.png" alt="watch" />
+            </div>
+            <div class="sale-title">
+              <span>Headphones</span>
+            </div>
+            <div class="sale-percent">
+              <span>-25%</span>
+            </div>
+          </div>
+          <div class="sale-item">
+            <div class="sale-image">
+              <img src="../static//images/phone.png" alt="watch" />
+            </div>
+            <div class="sale-title">
+              <span>Samsung</span>
+            </div>
+            <div class="sale-percent">
+              <span>-25%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="blog-item-group">
+      <div class="container">
+        <div class="bg-card">
+          <div class="left-aside">
+            <div class="left-aside-picture">
+              <img
+                src="../static//images//left-aside-1.jpg"
+                alt="left-aside-1"
+              />
+            </div>
+            <div class="left-aside-title">
+              <strong>Home and <br />out door</strong>
+            </div>
+            <button class="main-button">Source now</button>
+          </div>
+          <div class="right-aside">
+            <div class="right-aside-item">
+              <div class="aside-item-title">
+                <span>Soft chairs</span>
+              </div>
+              <div class="aside-item-desc">
+                <span>From<br />200,000 VND</span>
+              </div>
+              <div class="aside-item-img">
+                <img src="../static//images//chair.png" alt="chair" />
+              </div>
+            </div>
+              <div class="right-aside-item">
+                  <div class="aside-item-title">
+                    <span>Lamps</span>
+                  </div>
+                  <div class="aside-item-desc">
+                    <span>From<br />200,000 VND</span>
+                  </div>
+                  <div class="aside-item-img">
+                    <img src="../static//images//lamp.png" alt="chair" />
+                  </div>
+                </div>
+                  <div class="right-aside-item">
+                  <div class="aside-item-title">
+                    <span>Kitchen dishes</span>
+                  </div>
+                  <div class="aside-item-desc">
+                    <span>From<br />200,000 VND</span>
+                  </div>
+                  <div class="aside-item-img">
+                    <img src="../static//images//kitchen.png" alt="chair" />
+                  </div>
+                </div>
+                  <div class="right-aside-item">
+                  <div class="aside-item-title">
+                    <span>Smart watch</span>
+                  </div>
+                  <div class="aside-item-desc">
+                    <span>From<br />200,000 VND</span>
+                  </div>
+                  <div class="aside-item-img">
+                    <img src="../static//images//item-4.png" alt="chair" />
+                  </div>
+                </div>
+                  <div class="right-aside-item">
+                  <div class="aside-item-title">
+                    <span>Soft chairs</span>
+                  </div>
+                  <div class="aside-item-desc">
+                    <span>From<br />200,000 VND</span>
+                  </div>
+                  <div class="aside-item-img">
+                    <img src="../static//images//item-5.png" alt="chair" />
+                  </div>
+                </div>
+                  <div class="right-aside-item">
+                  <div class="aside-item-title">
+                    <span>Soft chairs</span>
+                  </div>
+                  <div class="aside-item-desc">
+                    <span>From<br />200,000 VND</span>
+                  </div>
+                  <div class="aside-item-img">
+                    <img src="../static//images//item-6.png" alt="chair" />
+                  </div>
+                </div>
+                  <div class="right-aside-item">
+                  <div class="aside-item-title">
+                    <span>Kitchen mixer</span>
+                  </div>
+                  <div class="aside-item-desc">
+                    <span>From<br />200,000 VND</span>
+                  </div>
+                  <div class="aside-item-img">
+                    <img src="../static//images//item-7.jpg" alt="chair" />
+                  </div>
+                </div>
+                  <div class="right-aside-item">
+                  <div class="aside-item-title">
+                    <span>Soft chairs</span>
+                  </div>
+                  <div class="aside-item-desc">
+                    <span>From<br />200,000 VND</span>
+                  </div>
+                  <div class="aside-item-img">
+                    <img src="../static//images//item-8.png" alt="chair" />
+                  </div>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="blog-item-group">
+      <div class="container">
+        <div class="bg-card">
+          <div class="left-aside">
+            <div class="left-aside-picture">
+              <img
+                src="../static//images//left-aside-1.jpg"
+                alt="left-aside-1"
+              />
+            </div>
+            <div class="left-aside-title">
+              <strong>Home and <br />out door</strong>
+            </div>
+            <button class="main-button">Source now</button>
+          </div>
+          <div class="right-aside">
+            <div class="right-aside-item">
+              <div class="aside-item-title">
+                <span>Soft chairs</span>
+              </div>
+              <div class="aside-item-desc">
+                <span>From<br />200,000 VND</span>
+              </div>
+              <div class="aside-item-img">
+                <img src="../static//images//chair.png" alt="chair" />
+              </div>
+            </div>
+              <div class="right-aside-item">
+                  <div class="aside-item-title">
+                    <span>Lamps</span>
+                  </div>
+                  <div class="aside-item-desc">
+                    <span>From<br />200,000 VND</span>
+                  </div>
+                  <div class="aside-item-img">
+                    <img src="../static//images//lamp.png" alt="chair" />
+                  </div>
+                </div>
+                  <div class="right-aside-item">
+                  <div class="aside-item-title">
+                    <span>Kitchen dishes</span>
+                  </div>
+                  <div class="aside-item-desc">
+                    <span>From<br />200,000 VND</span>
+                  </div>
+                  <div class="aside-item-img">
+                    <img src="../static//images//kitchen.png" alt="chair" />
+                  </div>
+                </div>
+                  <div class="right-aside-item">
+                  <div class="aside-item-title">
+                    <span>Smart watch</span>
+                  </div>
+                  <div class="aside-item-desc">
+                    <span>From<br />200,000 VND</span>
+                  </div>
+                  <div class="aside-item-img">
+                    <img src="../static//images//item-4.png" alt="chair" />
+                  </div>
+                </div>
+                  <div class="right-aside-item">
+                  <div class="aside-item-title">
+                    <span>Soft chairs</span>
+                  </div>
+                  <div class="aside-item-desc">
+                    <span>From<br />200,000 VND</span>
+                  </div>
+                  <div class="aside-item-img">
+                    <img src="../static//images//item-5.png" alt="chair" />
+                  </div>
+                </div>
+                  <div class="right-aside-item">
+                  <div class="aside-item-title">
+                    <span>Soft chairs</span>
+                  </div>
+                  <div class="aside-item-desc">
+                    <span>From<br />200,000 VND</span>
+                  </div>
+                  <div class="aside-item-img">
+                    <img src="../static//images//item-6.png" alt="chair" />
+                  </div>
+                </div>
+                  <div class="right-aside-item">
+                  <div class="aside-item-title">
+                    <span>Kitchen mixer</span>
+                  </div>
+                  <div class="aside-item-desc">
+                    <span>From<br />200,000 VND</span>
+                  </div>
+                  <div class="aside-item-img">
+                    <img src="../static//images//item-7.jpg" alt="chair" />
+                  </div>
+                </div>
+                  <div class="right-aside-item">
+                  <div class="aside-item-title">
+                    <span>Soft chairs</span>
+                  </div>
+                  <div class="aside-item-desc">
+                    <span>From<br />200,000 VND</span>
+                  </div>
+                  <div class="aside-item-img">
+                    <img src="../static//images//item-8.png" alt="chair" />
+                  </div>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="web-brief">
+      <div class="container">
+        <div class="web-brief-wrap">
+          <div class="web-brief-desc">
+            <div class="web-brief-desc-title">
+              <div class="web-brief-logo">
+                <img
+                  class="logo-1"
+                  src="../static//images//brief-icon-1.svg"
+                  alt="brief-icon-1"
+                />
+                <img
+                  class="logo-2"
+                  src="../static//images//brief-icon-2.svg"
+                  alt="brief-icon-2"
+                />
+                <div class="logo-3-wrap">
+                  <img
+                    class="logo-3"
+                    src="../static//images//brief-icon-3.svg"
+                    alt="brief-icon-3"
+                  />
+                </div>
+              </div>
+
+              <span style="color: #8cb7f5"> E-grocery</span>
+            </div>
+            <div class="web-brief-desc-desc">
+              <span
+                >Ecommerce website sells everything <br />you need (except
+                girlfriend).</span
+              >
+            </div>
+            <div class="social-media">
+              <span>
+                <img src="../static//images//facebook.svg" alt="facebook" />
+              </span>
+              <span>
+                <img src="../static//images//twitter.svg" alt="twitter" />
+              </span>
+              <span>
+                <img src="../static//images/linkedin.svg" alt="linkedin" />
+              </span>
+              <span>
+                <img src="../static//images//instagram.svg" alt="instagram" />
+              </span>
+              <span>
+                <img src="../static//images//youtube.svg" alt="youtube" />
+              </span>
+            </div>
+          </div>
+          <div class="web-brief-item">
+            <strong class="web-brief-item-title">About</strong>
+            <span class="web-brief-item-content">About us</span>
+            <span class="web-brief-item-content">Find store</span>
+            <span class="web-brief-item-content">Categories</span>
+            <span class="web-brief-item-content">Blogs</span>
+          </div>
+          <div class="web-brief-item">
+            <strong class="web-brief-item-title">Partnership</strong>
+            <span class="web-brief-item-content">About us</span>
+            <span class="web-brief-item-content">Find store</span>
+            <span class="web-brief-item-content">Categories</span>
+            <span class="web-brief-item-content">Blogs</span>
+          </div>
+          <div class="web-brief-item">
+            <strong class="web-brief-item-title">Information</strong>
+            <span class="web-brief-item-content">Help center</span>
+            <span class="web-brief-item-content">Money refund</span>
+            <span class="web-brief-item-content">Contact us</span>
+          </div>
+          <div class="web-brief-item">
+            <strong class="web-brief-item-title">For users</strong>
+            <span class="web-brief-item-content">Login</span>
+            <span class="web-brief-item-content">Register</span>
+            <span class="web-brief-item-content">My orders</span>
+          </div>
+          <div class="web-brief-get-app">
+            <strong class="web-brief-item-title">Get apps</strong>
+            <img
+              class="app"
+              src="../static//images/app-store.svg"
+              alt="app-store"
+            />
+            <img
+              class="app"
+              src="../static//images/google-play.svg"
+              alt="google-play"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-wrap">
+          <div class="footer-left">
+            <span>©️ 2023 E-grocery</span>
+          </div>
+          <div class="footer-right">
+            <img src="../static/images/us-flag.svg" alt="us-flag" />
+            <span>English</span>
+            <img src="../static//images//icon-up.svg" alt="icon-up" />
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--bootstrap js-->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

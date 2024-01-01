@@ -9,4 +9,5 @@ views = Blueprint('views', __name__)
 
 @views.route('/')
 def home(): 
-    return render_template('webcart.html')
+    return render_template('homepage.html')
+
