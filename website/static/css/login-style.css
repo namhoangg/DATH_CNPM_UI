@@ -1,0 +1,178 @@
+/* Import the Lexend Deca font */
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+/* Specific Styles for Username and Password */
+.form-group {
+    margin-bottom: 20px; /* Adjust as needed for spacing */
+}
+
+.login-form-container {
+    width: 380px; /* Width from Figma */
+    height: 480px; /* Height from Figma */
+    background-color: #FFFFFF; /* White background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adding a shadow for depth */
+    margin: 0 auto; /* Center the container on the page */
+    padding: 20px; /* Add padding inside the container */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.form-group input {
+    width: 300px; /* Width of the input field */
+    height: 45px; /* Height of the input field */
+    border-radius: 10px; /* Rounded corners for the input field */
+    border: none; /* No border */
+    padding: 12px; /* Padding inside the input field */
+    font-size: 14px; /* Font size from Figma */
+    line-height: 20px; /* Line height from Figma */
+    color: #8B96A5; /* Assuming gray-500 for text color */
+    background-color: #DEE2E7; /* Background color for the input field */
+}
+
+/* Placeholder color */
+.form-group input::placeholder {
+    color: #BDC4CD; /* Placeholder text color from Figma */
+}
+
+/* Focus state for input fields */
+.form-group input:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.2); /* Add a subtle shadow for focus */
+}
+
+/* Button Styles */
+.login-button {
+    background-color: #0D6EFD; /* Example blue color for the button */
+    color: white; /* Button text color */
+    width: 300px; /* Match the input field width */
+    height: 45px; /* Match the input field height */
+    border-radius: 10px; /* Rounded corners for the button */
+    border: none; /* No border for the button */
+    font-size: 14px; /* Font size for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Button hover state */
+.login-button:hover {
+    background-color: #7aa6e0; /* A slightly darker blue for the hover state */
+
+}
+
+.login-header h2 {
+    font-size: 24px; /* Font size for the title */
+    font-weight: 600; /* Font weight from Figma */
+    line-height: 32px; /* Line height from Figma */
+    color: #000000; /* Font color for the title */
+    letter-spacing: -0.02px; /* Letter spacing for the title */
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+    /* Adjust the following as needed to position your title according to your design */
+}
+
+/* Styles for the Forgot password text */
+.forgot-password a {
+    font-size: 16px; /* Font size from Figma */
+    font-weight: 400; /* Font weight from Figma */
+    line-height: 24px; /* Line height from Figma */
+    color: #8B96A5 !important; /* Assuming gray-500 for text color */
+    letter-spacing: -0.02px; /* Letter spacing from Figma */
+    text-align: center; /* Center align if necessary */
+    text-decoration: none; /* Remove underline from links */
+    display: block; /* Make the link a block to be able to set width and height */
+    width: 250px; /* Width from Figma */
+    margin: auto; /* Center the block if necessary */
+}
+
+/* You may not need the following exact positioning if you're centering your form */
+.forgot-password {
+    margin-top: 10px; /* Space above the forgot password link */
+}
+
+.signup-section {
+    /* Adjust the div's layout as necessary */
+    text-align: center; /* Centers the content horizontally */
+    /* Additional styles for layout and positioning can be added if needed */
+}
+
+.line-container {
+    text-align: center; /* Center align the content */
+    position: relative; /* Positioning context for the lines */
+    padding: 20px 0; /* Provide some spacing around the text */
+}
+
+/* The lines above and below the text */
+.top-line, .bottom-line {
+    border-top: 1px solid #DEE2E7; /* The color and thickness of the line */
+    width: 110px; /* Width of the lines */
+    margin: auto; /* Center the lines horizontally */
+    opacity: 0.8; /* 80% opacity */
+}
+
+/* The text between the lines */
+.lined-text {
+    display: inline-block; /* Allows for automatic width according to content */
+    position: relative; /* Allows z-index to be applied */
+    z-index: 1; /* Ensures the text appears above the lines */
+    background-color: #FFF; /* Background color of the text, matching your page background */
+    padding: 0 10px; /* Spacing on either side of the text */
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    line-height: 15.73px;
+    color: #000000;
+    font-weight: 400;
+}
+
+/* Adjust the top line to appear above the text */
+.top-line {
+    position: absolute;
+    top: 50%; /* Center the line vertically */
+    transform: translateY(-50%); /* Offset the line by half its height */
+}
+
+/* Adjust the bottom line to appear below the text */
+.bottom-line {
+    position: absolute;
+    top: 50%; /* Center the line vertically */
+    transform: translateY(-50%); /* Offset the line by half its height */
+}
+
+.signup-section p {
+    font-family: 'Inter', sans-serif; /* Sets the font family to 'Inter' */
+    font-size: 13px; /* Sets the font size to 13px */
+    font-weight: 400; /* Sets the font weight to 400 */
+    line-height: 15.73px; /* Sets the line height to 15.73px */
+    color: #8B96A5; /* Sets the text color to black */
+}
+
+.signup-button {
+    font-family: 'Inter', sans-serif; /* Sets the font family */
+    font-size: 16px; /* Sets the font size */
+    font-weight: 600; /* Sets the font weight */
+    color: #8B96A5; /* Sets the text color to gray-500 */
+    background-color: #DEE2E7; /* Sets the background color to gray-300 */
+    width: 300px; /* Sets the width of the button */
+    height: 45px; /* Sets the height of the button */
+    line-height: 45px; /* Sets the line height to vertically center the text */
+    border-radius: 10px; /* Rounds the corners of the button */
+    border: none; /* Removes the border */
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3); /* Adds a shadow below the button */
+    display: block; /* Changes the element's display to block */
+    text-align: center; /* Centers the text horizontally */
+    cursor: pointer; /* Changes the cursor to a pointer to signify it's clickable */
+    text-decoration: none; /* Removes the text underline */
+    margin-top: 10px; /* Adds a top margin */
+    margin-bottom: 10px; /* Adds a bottom margin for spacing */
+}
+
+.signup-button:hover {
+    background-color: #cad2d8; /* Darkens the button background on hover */
+}
+
