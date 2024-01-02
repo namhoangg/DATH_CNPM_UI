@@ -232,7 +232,7 @@
               </div>
             </div>
           </div>
-          <div class="sale-item">
+          <!--<div class="sale-item">
             <div class="sale-image">
               <img src="{{ url_for('static', filename='product_images/class_diagram.png') }}" alt="watch" />
             </div>
@@ -286,7 +286,20 @@
             <div class="sale-percent">
               <span>-25%</span>
             </div>
-          </div>
+          </div>-->
+          {% for product in products %}
+            <div class="sale-item">
+                <div class="sale-image">
+                    <img src="{{ url_for('static', filename=product.image_url) }}" alt="{{ product.name }}" />
+                </div>
+                <div class="sale-title">
+                    <span>{{ product.name }}</span>
+                </div>
+                <div class="sale-percent">
+                    <span>-{{ product.discount }}%</span>
+                </div>
+            </div>
+          {% endfor %}
         </div>
       </div>
     </div>
@@ -411,7 +424,7 @@
             <div class="left-aside-title">
               <strong>Home and <br />out door</strong>
             </div>
-            <button class="main-button">Source now</button>
+            <button class="main-button" onclick="window.location.href='/list-view'">Source now</button>
           </div>
           <div class="right-aside">
             <div class="right-aside-item">

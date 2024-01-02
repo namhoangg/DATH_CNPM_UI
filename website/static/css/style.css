@@ -419,6 +419,8 @@ header {
   position: relative;
   height: 100%;
   padding-bottom: 20px;
+  margin-bottom: 60px;
+  overflow: auto;
 }
 .section-sidebar {
   position: relative;

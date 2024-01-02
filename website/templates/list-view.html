@@ -46,18 +46,19 @@
             <span style="color: #8cb7f5"> E-grocery</span>
           </div>
           <div class="header-search">
-            <form action="#">
+            <form action="{{ url_for('views.search_results') }}" method="get">
               <div class="search">
                 <input name="keyword" type="text" placeholder="Search" />
               </div>
               <div class="categories">
                 <select name="category">
-                  <option value="all">All category</option>
-                  <option value="vegetables">Vegetables</option>
-                  <option value="fruits">Fruits</option>
-                  <option value="meat">Meat</option>
-                  <option value="seafood">Seafood</option>
-                  <option value="dairy">Dairy</option>
+                  <option value="all">All categories</option>
+                  <option value="Smart Watch">Smart Watch</option>
+                  <option value="Camera">Camera</option>
+                  <option value="Headphone">Headphone</option>
+                  <option value="Gaming Set">Gaming Set</option>
+                  <option value="Laptop">Laptop</option>
+                  <option value="Tablet">Tablet</option>
                 </select>
               </div>
               <div class="search-submit">
@@ -163,33 +164,38 @@
               >
               <a href="#" class="sidebar-category-seeAll seeAll">See all</a>
             </div>
+
+            <form action="{{ url_for('views.apply_filters') }}" method="get" id="filters-form">
             <div class="sidebar-brands">
               <div class="sidebar-brands-title mb-1">
                 <span>Brands</span>
                 <img src="../static//images/icon-up.svg" alt="icon-up" />
               </div>
               <div class="sidebar-brands-item mb-1 flex-and-center">
-                <input type="checkbox" name="brand" id="brand-1" class="mr-1" />
-                <label for="brand-1" class="gray-600">Apple</label>
+                <input type="checkbox" name="brand" value="BrandX" id="brand-1" class="mr-1" />
+                <label for="brand-1" class="gray-600">BrandX</label>
               </div>
               <div class="sidebar-brands-item mb-1 flex-and-center">
-                <input type="checkbox" name="brand" id="brand-2" class="mr-1" />
-                <label for="brand-2" class="gray-600">Samsung</label>
+                <input type="checkbox" name="brand" value="BrandY" id="brand-2" class="mr-1" />
+                <label for="brand-2" class="gray-600">BrandY</label>
               </div>
               <div class="sidebar-brands-item mb-1 flex-and-center">
-                <input type="checkbox" name="brand" id="brand-3" class="mr-1" />
-                <label for="brand-3" class="gray-600">Xiaomi</label>
+                <input type="checkbox" name="brand"  value="BrandZ" id="brand-3" class="mr-1" />
+                <label for="brand-3" class="gray-600">BrandZ</label>
               </div>
               <div class="sidebar-brands-item mb-1 flex-and-center">
-                <input type="checkbox" name="brand" id="brand-4" class="mr-1" />
-                <label for="brand-4" class="gray-600">Huawei</label>
+                <input type="checkbox" name="brand" value="BrandA" id="brand-4" class="mr-1" />
+                <label for="brand-4" class="gray-600">BrandA</label>
               </div>
               <div class="sidebar-brands-item mb-1 flex-and-center">
-                <input type="checkbox" name="brand" id="brand-5" class="mr-1" />
-                <label for="brand-5" class="gray-600">Oppo</label>
+                <input type="checkbox" name="brand" value="BrandP" id="brand-5" class="mr-1" />
+                <label for="brand-5" class="gray-600">BrandP</label>
               </div>
               <a href="#" class="sidebar-brands-seeAll seeAll">See all</a>
             </div>
+            <!--
+
+            
             <div class="sidebar-features">
               <div class="sidebar-features-title mb-1 flex-and-center">
                 <span>Features</span>
@@ -244,6 +250,7 @@
               </div>
               <a href="#" class="sidebar-features-seeAll seeAll">See all</a>
             </div>
+            -->
             <div class="sidebar-price">
               <div class="sidebar-price-title">
                 <span>Price range</span>
@@ -263,27 +270,15 @@
               <div class="sidebar-range-min-max">
                 <div class="sidebar-range-min">
                   <label for="min">Min</label>
-                  <input type="text" id="min" value="0" />
+                  <input type="text" name="min_price" id="min" value="0" />
                 </div>
                 <div class="sidebar-range-max">
                   <label for="max">Max</label>
-                  <input type="text" id="max" value="99999" />
+                  <input type="text" name="max_price" id="max" value="99999" />
                 </div>
               </div>
-              <div class="sidebar-button-apply">
-                <button
-                  class="mt-3"
-                  style="
-                    width: 100%;
-                    background: white;
-                    border: 1px solid var(--gray-300);
-                    color: blue;
-                  "
-                >
-                  Apply
-                </button>
-              </div>
             </div>
+            <!--
             <div class="sidebar-condition">
               <div class="sidebar-condition-title mb-1 flex-and-center">
                 <span>Condition</span>
@@ -327,52 +322,53 @@
               </div>
               <a href="#" class="sidebar-condition-seeAll seeAll">See all</a>
             </div>
+            -->
+
             <div class="sidebar-rating">
               <div class="sidebar-rating-title mb-1 flex-and-center">
                 <span>Average rating</span>
                 <img src="../static//images/icon-up.svg" alt="icon-up" />
               </div>
               <div class="sidebar-rating-item mb-1 flex-and-center">
-                <input
-                  type="checkbox"
-                  name="rating"
-                  id="rating-5"
-                  class="mr-1"
-                />
+                <input type="checkbox" name="rating" value="5" id="rating-5" class="mr-1" />
                 <img src="../static//images//5start.svg" />
               </div>
               <div class="sidebar-rating-item mb-1 flex-and-center">
-                <input
-                  type="checkbox"
-                  name="rating"
-                  id="rating-4"
-                  class="mr-1"
-                />
+                <input type="checkbox" name="rating" value="4" id="rating-4" class="mr-1" />
                 <img src="../static//images//4stars.svg" />
               </div>
               <div class="sidebar-rating-item mb-1 flex-and-center">
-                <input
-                  type="checkbox"
-                  name="rating"
-                  id="rating-3"
-                  class="mr-1"
-                />
+                <input type="checkbox" name="rating" value="3" id="rating-3" class="mr-1" />
                 <img src="../static//images//3star.svg" />
               </div>
               <div class="sidebar-rating-item mb-1 flex-and-center">
-                <input
-                  type="checkbox"
-                  name="rating"
-                  id="rating-2"
-                  class="mr-1"
-                />
+                <input type="checkbox" name="rating" value="2" id="rating-2" class="mr-1" />
                 <img src="../static//images//2star.svg" />
               </div>
             </div>
+            
+            <div class="sidebar-button-apply">
+              <button
+                class="mt-3"
+                style="
+                  width: 100%;
+                  background: white;
+                  border: 1px solid var(--gray-300);
+                  color: blue;
+                "
+              >
+                Apply
+              </button>
+            </div>
+            </form>
           </div>
+          
+
+
           <div class="content-top">
             <span>12,911 items in <strong>Mobile accessory</strong></span>
           </div>
+          <!--
           <div class="content">
             <div class="content-item">
               <div class="content-item-picture">
@@ -415,130 +411,50 @@
                 </div>
               </div>
             </div>
-            <div class="content-item">
-              <div class="content-item-picture">
-                <img src="../static//images/phone.png" alt="phone" />
+          </div>-->
+          <div class="content">
+              {% for product in products %}
+              <div class="content-item">
+                  <div class="content-item-picture">
+                      <img src="{{ url_for('static', filename=product.image_url) }}" alt="{{ product.name }}" />
+                  </div>
+                  <div class="content-item-info">
+                      <div class="content-item-info-title">
+                          <span>{{ product.name }}</span>
+                          <img src="../static//images/heart.svg" alt="heart" />
+                      </div>
+                      <div class="content-item-info-price">
+                          <span class="price">${{ product.price }}</span>
+                          <!-- Include old price if you have such data -->
+                      </div>
+                      <div class="content-item-info-rating">
+                          <!-- Rating and other details here -->
+                          <img src="../static//images//5start.svg" alt="Rating" />
+                          <span>{{ product.review_rating }}</span>
+                          <img
+                            src="../static//images//dot.svg"
+                            alt="dot"
+                            class="mr-1"
+                          />
+                          <span class="mr-1">11000 orders</span>
+                          <img
+                            class="mr-1"
+                            src="../static//images//dot.svg"
+                            alt="dot"
+                          />
+                          <span>Free shipping</span>
+                      </div>
+                      <div class="content-item-info-desc">
+                          <p>{{ product.description }}</p>
+                      </div>
+                      <div class="content-item-info-details">
+                          <a href="#">View details</a>
+                      </div>
+                  </div>
               </div>
-              <div class="content-item-info">
-                <div class="content-item-info-title">
-                  <span>Apple iPhone 11 Pro Max, 256GB, Midnight Green</span>
-                  <img src="../static//images/heart.svg" alt="heart" />
-                </div>
-                <div class="content-item-info-price">
-                  <span class="price">$1,099.00</span>
-                  <del class="price-old">$1,299.00</del>
-                </div>
-                <div class="content-item-info-rating">
-                  <img src="../static//images//5start.svg" alt="5star" />
-                  <span class="mr-1">4.5</span>
-                  <img
-                    src="../static//images//dot.svg"
-                    alt="dot"
-                    class="mr-1"
-                  />
-                  <span class="mr-1">11000 orders</span>
-                  <img
-                    class="mr-1"
-                    src="../static//images//dot.svg"
-                    alt="dot"
-                  />
-                  <span>Free shipping</span>
-                </div>
-                <div class="content-item-info-desc">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua
-                  </p>
-                </div>
-                <div class="content-item-info-details">
-                  <a href="#">View details</a>
-                </div>
-              </div>
-            </div>
-            <div class="content-item">
-              <div class="content-item-picture">
-                <img src="../static//images/phone.png" alt="phone" />
-              </div>
-              <div class="content-item-info">
-                <div class="content-item-info-title">
-                  <span>Apple iPhone 11 Pro Max, 256GB, Midnight Green</span>
-                  <img src="../static//images/heart.svg" alt="heart" />
-                </div>
-                <div class="content-item-info-price">
-                  <span class="price">$1,099.00</span>
-                  <del class="price-old">$1,299.00</del>
-                </div>
-                <div class="content-item-info-rating">
-                  <img src="../static//images//5start.svg" alt="5star" />
-                  <span class="mr-1">4.5</span>
-                  <img
-                    src="../static//images//dot.svg"
-                    alt="dot"
-                    class="mr-1"
-                  />
-                  <span class="mr-1">11000 orders</span>
-                  <img
-                    class="mr-1"
-                    src="../static//images//dot.svg"
-                    alt="dot"
-                  />
-                  <span>Free shipping</span>
-                </div>
-                <div class="content-item-info-desc">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua
-                  </p>
-                </div>
-                <div class="content-item-info-details">
-                  <a href="#">View details</a>
-                </div>
-              </div>
-            </div>
-            <div class="content-item">
-              <div class="content-item-picture">
-                <img src="../static//images/phone.png" alt="phone" />
-              </div>
-              <div class="content-item-info">
-                <div class="content-item-info-title">
-                  <span>Apple iPhone 11 Pro Max, 256GB, Midnight Green</span>
-                  <img src="../static//images/heart.svg" alt="heart" />
-                </div>
-                <div class="content-item-info-price">
-                  <span class="price">$1,099.00</span>
-                  <del class="price-old">$1,299.00</del>
-                </div>
-                <div class="content-item-info-rating">
-                  <img src="../static//images//5start.svg" alt="5star" />
-                  <span class="mr-1">4.5</span>
-                  <img
-                    src="../static//images//dot.svg"
-                    alt="dot"
-                    class="mr-1"
-                  />
-                  <span class="mr-1">11000 orders</span>
-                  <img
-                    class="mr-1"
-                    src="../static//images//dot.svg"
-                    alt="dot"
-                  />
-                  <span>Free shipping</span>
-                </div>
-                <div class="content-item-info-desc">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua
-                  </p>
-                </div>
-                <div class="content-item-info-details">
-                  <a href="#">View details</a>
-                </div>
-              </div>
-            </div>
+              {% endfor %}
           </div>
+
           <div class="content-pagination">
             <nav aria-label="Page navigation example">
               <ul class="pagination">
@@ -678,5 +594,6 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    
   </body>
 </html>
