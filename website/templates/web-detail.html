@@ -1,81 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles-web-detail.css') }}">
-    <title>Web-detail</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Footer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-wrap">
+          <div class="web-brief-desc-title">
+            <div class="web-brief-logo">
+              <img
+                class="logo-1"
+                src="../assets//images//brief-icon-1.svg"
+                alt="brief-icon-1"
+              />
+              <img
+                class="logo-2"
+                src="../assets//images//brief-icon-2.svg"
+                alt="brief-icon-2"
+              />
+              <div class="logo-3-wrap">
+                <img
+                  class="logo-3"
+                  src="../assets//images//brief-icon-3.svg"
+                  alt="brief-icon-3"
+                />
+              </div>
+            </div>
 
-</head>
-    <body>
-        <header>
-            <div class="logo">
-                <img src="logo.jpg" alt="E-Grocery" height="30">
-                E-Grocery
+            <span style="color: #8cb7f5"> E-grocery</span>
             </div>
-            <div class="search-container">
-                <input type="text" placeholder="Search">
-                <select>
-                    <option value="all">All Categories</option>
-                    <!-- Add more categories here -->
+        <div class="header-search">
+            <form action="#">
+              <div class="search">
+                <input name="keyword" type="text" placeholder="Search" />
+              </div>
+              <div class="categories">
+                <select name="category">
+                  <option value="all">All category</option>
+                  <option value="vegetables">Vegetables</option>
+                  <option value="fruits">Fruits</option>
+                  <option value="meat">Meat</option>
+                  <option value="seafood">Seafood</option>
+                  <option value="dairy">Dairy</option>
                 </select>
-                <button type="submit">Search 😎</button>
+              </div>
+              <div class="search-submit">
+                <button type="submit">Search</button>
+              </div>
+            </form>
+          </div>
+          <div class="header-action">
+            <div class="action-item">
+              <img src="../assets//images//profile.svg" alt="profile" />
+              <span>Profile</span>
             </div>
-            <ul class="nav-links">
-                <li><a href="#">🤵 Profile</a></li>
-                <li><a href="#">✉ Messages</a></li>
-                <li><a href="#">♥️ Orders</a></li>
-                <li><a href="#">️🛒 My Cart</a></li>
-            </ul>
-        </header>
+            <div class="action-item">
+              <img src="../assets//images//message.svg" alt="message" />
+              <span>Message</span>
+            </div>
+            <div class="action-item">
+              <img src="../assets//images//order.svg" alt="Orders" />
+              <span>Orders</span>
+            </div>
+            <div class="action-item">
+              <img src="../assets//images//cart.svg" alt="Cart" />
+              <span>My cart</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <hr class="border" />
+    <div class="nav-bar">
+      <div class="container">
+        <div class="nav-bar-wrap">
+          <div class="nav-left">
+            <div class="nav-icon">
+              <img src="../assets//images//navbar.svg" alt="navbar" />
+            </div>
+            <div class="nav-category">
+              <span>All category</span>
+            </div>
+            <div class="nav-hot">
+              <span>Hot offers</span>
+            </div>
+            <div class="nav-select">
+              <select>
+                <option value="Help">Help</option>
+              </select>
+            </div>
+          </div>
+          <div class="nav-payment">
+            <div class="nav-payment-current">Vietnam, VND</div>
+            <div class="nav-payment-icon">
+              <img src="../assets//images//icon-down.svg" alt="down" />
+            </div>
+          </div>
+          <div class="nav-location">
+            <div class="nav-location-address">
+              <span>Ship to</span>
+              <img src="../assets//images//vn-flag.svg" alt="vn-flag" />
+            </div>
+            <div class="nav-payment-icon">
+              <img src="../assets//images//icon-down.svg" alt="down" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-        <nav class="navbar">
-            <div class="navbar-left">
-                <div class="menu-icon">☰ All category</div>
-                <ul>
-                    <li><a href="#">🔥 Hot offers</a></li>
-                    <li>
-                        <select>
-                            <option value="help">Help</option>
-                            <!-- Add more options here -->
-                        </select>
-                    </li>
-                </ul>
-            </div>
-            <div class="navbar-right">
-                <select>
-                    <option>Vietnam, VND</option>
-                    <!-- Add more countries/currencies here -->
-                </select>
-                <select>
-                    <option>Ship to</option>
-                    <!-- Add more shipping options here -->
-                </select>
-            </div>
-        </nav>
+    <hr class="border" />
+    <div class="breadcr">
+        <div class="container">
+          <div class="breadcrumb">
+            <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item active">Home</li>
+                <li class="breadcrumb-item active">Clothing</li>
+                <li class="breadcrumb-item active">Men's wear</li>
+                <li class="breadcrumb-item active">Summer clothing</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+    </div>
 
+        <br>
         <div class="product-container">
             <div class="image-gallery">
               <div class="main-image" id="mainImage">
-                <img src="t-shirt.jpg" alt="Product Image">
+                <img src="..//assets//images//t-shirt.jpg" alt="Product Image">
               </div>
-              <div class="thumbnail" onclick="changeImage('t-shirt.jpg')">
-                <img src="t-shirt.jpg" alt="Thumbnail 1">
+              <div class="thumbnail" onclick="changeImage('..//assets//images//t-shirt.jpg')">
+                <img src="..//assets//images//t-shirt.jpg" alt="Thumbnail 1">
               </div>
-              <div class="thumbnail" onclick="changeImage('t-shirt2.jpg')">
-                <img src="t-shirt2.jpg" alt="Thumbnail 1">
+              <div class="thumbnail" onclick="changeImage('..//assets//images//t-shirt2.jpg')">
+                <img src="..//assets//images//t-shirt2.jpg" alt="Thumbnail 1">
               </div>
-              <div class="thumbnail" onclick="changeImage('t-shirt3.jpg')">
-                <img src="t-shirt3.jpg" alt="Thumbnail 2">
+              <div class="thumbnail" onclick="changeImage('..//assets//images//t-shirt3.jpg')">
+                <img src="..//assets//images//t-shirt3.jpg" alt="Thumbnail 2">
               </div>
               <!-- Add more thumbnails as needed -->
             </div>
             <div class="product-info">
-            <div class="product-title">Mens Long Sleeve T-shirt Cotton Base Layer Slim Muscle</div>
-            <div class="product-price">$98.00 - $78.00</div>
-            <div class="product-rating">Rating: 9.3</div>
-            </div>
-            <div class="product-details">
+                <div class="product-title">Mens Long Sleeve T-shirt Cotton Base Layer Slim Muscle</div>
+                <div class="product-price">$98.00 - $78.00</div>
+                <div class="product-rating">
+                    <div class="rating-stars">
+                    <!-- Assuming 5 stars, use ★ for filled and ☆ for empty -->
+                    ★★★★★
+                    </div>
+                    <div class="rating-score">9.3</div>
+                    <div class="rating-reviews">32 reviews</div>
+                    <div class="rating-sold">154 sold</div>
+                </div>
+              
                 <div class="detail-item">
                   <strong>Price:</strong> <span>Negotiable</span>
                 </div>
@@ -97,66 +192,315 @@
                 <div class="detail-item">
                   <strong>Warranty:</strong> <span>2 years full warranty</span>
                 </div>
-              </div>
+            </div>
+            <div class="product-supplier">
+                <div class="supplier-header">
+                    <span class="supplier-letter">R</span>
+                    <h3 class="supplier-name">Supplier</h3> 
+                    <p class="supplier-company">Guanjoi Trading LLC</p>
+                  </div>
+                  <p class="supplier-location">
+                    <img src="..//assets/images/germany-flag.png" alt="Germany Flag"> Germany, Berlin
+                  </p>
+                  <p class="verified-seller">Verified Seller</p>
+                  <p class="worldwide-shipping">Worldwide shipping</p>
+                  <button class="inquiry-btn">Send inquiry</button>
+                  <button class="profile-btn">Seller's profile</button>
+                  <button class="save-for-later-btn">
+                    <span class="heart-icon">❤</span> <!-- You can replace this with an actual icon -->
+                    Save for later
+                  </button>
+            </div>
+              
         </div>
 
-        <div class="tab-container">
-            <ul class="tab-menu">
-              <li class="active">Description</li>
-              <li>Reviews</li>
-              <li>Shipping</li>
-              <li>About seller</li>
-            </ul>
-            <div class="tab-content">
-              <p>Embrace casual comfort with our premium cotton T-shirt, designed for those who appreciate
-                simplicity paired with style. This classic piece features a soft, breathable
-                fabric that promises all-day ease and a fit that's neither too snug nor too 
-                loose. Its versatile heather gray shade serves as a perfect canvas for any 
-                ensemble, whether layered under a denim jacket or worn solo to showcase its 
-                subtle finesse. The T-shirt's durable ribbed crew neck and double-stitched 
-                hem ensure it stands up to the rigors of daily wear while maintaining its
-                shape. With a slight stretch for mobility, it's an ideal choice for a 
-                leisurely day out or a relaxed evening in. This isn't just a T-shirt; 
-                it's a staple of effortless dressing, a testament to understated elegance.</p>
-              <table class="styled-table">
-                <thead>
-                  <tr>
-                    <th>Model</th>
-                    <th>#8786867</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Style</td>
-                    <td>Classic style</td>
-                  </tr>
-                  <tr>
-                    <td>Certificate</td>
-                    <td>ISO-898921212</td>
-                  </tr>
-                  <tr>
-                    <td>Size</td>
-                    <td>34mm x 450mm x 19mm</td>
-                  </tr>
-                  <tr>
-                    <td>Memory</td>
-                    <td>36GB RAM</td>
-                  </tr>
-                </tbody>
-              </table>
-              <ul class="feature-list">
-                <li>Some great feature name here</li>
-                <li>Lorem ipsum dolor sit amet, consectetur</li>
-                <li>Duis aute irure dolor in reprehenderit</li>
-                <li>Some great feature name here</li>
-              </ul>
+        <br>
+        <div class="main-container">
+            <div class="tab-container">
+                <ul class="tab-menu">
+                  <li class="active">Description</li>
+                  <li>Reviews</li>
+                  <li>Shipping</li>
+                  <li>About seller</li>
+                </ul>
+                <div class="tab-content">
+                  <p>Embrace casual comfort with our premium cotton T-shirt, designed for those who appreciate
+                    simplicity paired with style. This classic piece features a soft, breathable
+                    fabric that promises all-day ease and a fit that's neither too snug nor too 
+                    loose. Its versatile heather gray shade serves as a perfect canvas for any 
+                    ensemble, whether layered under a denim jacket or worn solo to showcase its 
+                    subtle finesse. The T-shirt's durable ribbed crew neck and double-stitched 
+                    hem ensure it stands up to the rigors of daily wear while maintaining its
+                    shape. With a slight stretch for mobility, it's an ideal choice for a 
+                    leisurely day out or a relaxed evening in.</p>
+                  <table class="styled-table">
+                    <thead>
+                      <tr>
+                        <th>Model</th>
+                        <th>#8786867</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Style</td>
+                        <td>Classic style</td>
+                      </tr>
+                      <tr>
+                        <td>Certificate</td>
+                        <td>ISO-898921212</td>
+                      </tr>
+                      <tr>
+                        <td>Size</td>
+                        <td>34mm x 450mm x 19mm</td>
+                      </tr>
+                      <tr>
+                        <td>Memory</td>
+                        <td>36GB RAM</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <ul class="feature-list">
+                    <li>Some great feature name here</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur</li>
+                    <li>Duis aute irure dolor in reprehenderit</li>
+                    <li>Some great feature name here</li>
+                  </ul>
+                </div>
+            </div>
+            
+            <div class="recommendations">
+                <h3>You may like</h3>
+                <ul class="product-list">
+                    <!-- Repeat this list item for each recommended product -->
+                    <li class="product">
+                        <img src="..//assets/images/blazer-image.jpg" alt="Men Blazers Sets Elegant Formal">
+                        <div class="product-info">
+                            <span class="product-name">Men Blazers Sets Elegant Formal</span>
+                            <span class="product-price">$7.00 - $99.50</span>
+                        </div>
+                    </li>
+                    <li class="product">
+                        <img src="..//assets/images/car-image.jpg" alt="Maserati-car">
+                        <div class="product-info">
+                            <span class="product-name">Maserati suppercar replica 1:1</span>
+                            <span class="product-price">$7.00 - $99.50</span>
+                        </div>
+                    </li>
+                    <li class="product">
+                        <img src="..//assets/images/shirt-image.jpg" alt="Men Shirt Sleeve Polo Contrast">
+                        <div clas="product-info">
+                            <span class="product-name">Men Shirt Sleeve Polo Contrast</span>
+                            <span class="product-price">$7.00 - $99.50</span>
+                        </div>
+                    </li>
+                    <!-- Additional product items here -->
+                    <li class="product">
+                        <img src="..//assets/images/watch-image.jpg" alt="Apple Watch Series Space Gray">
+                        <div clas="product-info">
+                            <span class="product-name">Apple Watch Series Space Gray</span>
+                            <span class="product-price">$7.00 - $99.50</span>
+                        </div>
+                      </li>
+                      <li class="product">
+                        <img src="..//assets/images/socks-image.jpg" alt="Basketball Crew Socks Long">
+                        <div clas="product-info">
+                            <span class="product-name">Basketball Crew Socks Long</span>
+                            <span class="product-price">$7.00 - $99.50</span>
+                        </div>
+                      </li>
+                      <li class="product">
+                        <img src="..//assets/images/accessories-image.jpg" alt="Stylish Accessory">
+                        <div clas="product-info">
+                            <span class="product-name">Stylish Accessory</span>
+                            <span class="product-price">$15.00 - $45.50</span>
+                        </div>
+                      </li>
+                </ul>
             </div>
         </div>
+              
+        <br>
+        <div class="related-products-container">
+            <h3>Related products</h3>
+            <div class="related-products">
+              <!-- Repeat this block for each product -->
+              <div class="product-card">
+                <img src="..//assets/images/xiaomi-image.jpg" alt="Product Name">
+                <div class="product-info">
+                  <span class="product-name">Xiaomi Redmi 8 Original</span>
+                  <span class="product-price">$32.00 - $40.00</span>
+                </div>
+              </div>
+              <!-- ... other product cards ... -->
+              <div class="product-card">
+                <img src="..//assets/images/xiaomi-image.jpg" alt="Product Name">
+                <div class="product-info">
+                  <span class="product-name">Xiaomi Redmi 8 Original</span>
+                  <span class="product-price">$32.00 - $40.00</span>
+                </div>
+              </div>
+              <div class="product-card">
+                <img src="..//assets/images/xiaomi-image.jpg" alt="Product Name">
+                <div class="product-info">
+                  <span class="product-name">Xiaomi Redmi 8 Original</span>
+                  <span class="product-price">$32.00 - $40.00</span>
+                </div>
+              </div>
+              <div class="product-card">
+                <img src="..//assets/images/xiaomi-image.jpg" alt="Product Name">
+                <div class="product-info">
+                  <span class="product-name">Xiaomi Redmi 8 Original</span>
+                  <span class="product-price">$32.00 - $40.00</span>
+                </div>
+              </div>
+              <div class="product-card">
+                <img src="..//assets/images/xiaomi-image.jpg" alt="Product Name">
+                <div class="product-info">
+                  <span class="product-name">Xiaomi Redmi 8 Original</span>
+                  <span class="product-price">$32.00 - $40.00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+        <div class="web-brief">
+            <div class="container">
+              <div class="web-brief-wrap">
+                <div class="web-brief-desc">
+                  <div class="web-brief-desc-title">
+                    <div class="web-brief-logo">
+                      <img
+                        class="logo-1"
+                        src="../assets//images//brief-icon-1.svg"
+                        alt="brief-icon-1"
+                      />
+                      <img
+                        class="logo-2"
+                        src="../assets//images//brief-icon-2.svg"
+                        alt="brief-icon-2"
+                      />
+                      <div class="logo-3-wrap">
+                        <img
+                          class="logo-3"
+                          src="../assets//images//brief-icon-3.svg"
+                          alt="brief-icon-3"
+                        />
+                      </div>
+                    </div>
+  
+                    <span style="color: #8cb7f5"> E-grocery</span>
+                  </div>
+                  <div class="web-brief-desc-desc">
+                    <span
+                      >Ecommerce website sells everything <br />you need (except
+                      girlfriend).</span
+                    >
+                  </div>
+                  <div class="social-media">
+                    <span>
+                      <img src="../assets//images//facebook.svg" alt="facebook" />
+                    </span>
+                    <span>
+                      <img src="../assets//images//twitter.svg" alt="twitter" />
+                    </span>
+                    <span>
+                      <img src="../assets//images/linkedin.svg" alt="linkedin" />
+                    </span>
+                    <span>
+                      <img
+                        src="../assets//images//instagram.svg"
+                        alt="instagram"
+                      />
+                    </span>
+                    <span>
+                      <img src="../assets//images//youtube.svg" alt="youtube" />
+                    </span>
+                  </div>
+                </div>
+                <div class="web-brief-item">
+                  <strong class="web-brief-item-title">About</strong>
+                  <span class="web-brief-item-content">About us</span>
+                  <span class="web-brief-item-content">Find store</span>
+                  <span class="web-brief-item-content">Categories</span>
+                  <span class="web-brief-item-content">Blogs</span>
+                </div>
+                <div class="web-brief-item">
+                  <strong class="web-brief-item-title">Partnership</strong>
+                  <span class="web-brief-item-content">About us</span>
+                  <span class="web-brief-item-content">Find store</span>
+                  <span class="web-brief-item-content">Categories</span>
+                  <span class="web-brief-item-content">Blogs</span>
+                </div>
+                <div class="web-brief-item">
+                  <strong class="web-brief-item-title">Information</strong>
+                  <span class="web-brief-item-content">Help center</span>
+                  <span class="web-brief-item-content">Money refund</span>
+                  <span class="web-brief-item-content">Contact us</span>
+                </div>
+                <div class="web-brief-item">
+                  <strong class="web-brief-item-title">For users</strong>
+                  <span class="web-brief-item-content">Login</span>
+                  <span class="web-brief-item-content">Register</span>
+                  <span class="web-brief-item-content">My orders</span>
+                </div>
+                <div class="web-brief-get-app">
+                  <strong class="web-brief-item-title">Get apps</strong>
+                  <img
+                    class="app"
+                    src="../assets//images/app-store.svg"
+                    alt="app-store"
+                  />
+                  <img
+                    class="app"
+                    src="../assets//images/google-play.svg"
+                    alt="google-play"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-wrap">
+            <div class="footer-left">
+              <span>©️ 2023 E-grocery</span>
+            </div>
+            <div class="footer-right">
+              <img src="../assets/images/us-flag.svg" alt="us-flag" />
+              <span>English</span>
+              <img src="../assets//images//icon-up.svg" alt="icon-up" />
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!--bootstrap js-->
 
         <script>
             function changeImage(src) {
               document.getElementById('mainImage').getElementsByTagName('img')[0].src = src;
             }
-          </script>
+
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"
+
+            document.querySelectorAll('.tab').forEach(function(tab) {
+                tab.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    var activeTabs = document.querySelectorAll('.active');
+                    activeTabs.forEach(function(activeTab) {
+                    activeTab.classList.remove('active');
+                    });
+
+                    tab.classList.add('active');
+                    var href = tab.querySelector('a').getAttribute('href');
+                    document.querySelector(href).classList.add('active');
+                });
+            });
+
+        </script>
     </body>
 </html>
