@@ -448,7 +448,7 @@
                           <p>{{ product.description }}</p>
                       </div>
                       <div class="content-item-info-details">
-                          <a href="#">View details</a>
+                        <a href="{{ url_for('views.view_product_detail', product_id=product.code) }}">View details</a>
                       </div>
                   </div>
               </div>

@@ -2,7 +2,7 @@
 
 from flask import Blueprint, render_template, request, flash, redirect, url_for
 from flask_login import login_user, login_required, logout_user, current_user
-from sqlalchemy import or_
+from sqlalchemy import or_, func
 from .model import Buyer, Product
 from . import db
 
@@ -61,3 +61,25 @@ def apply_filters():
 
     products = query.all()
     return render_template('list-view.html', products=products)
+
+@views.route('/product/<int:product_id>')
+def view_product_detail(product_id):
+    product = Product.query.get_or_404(product_id)
+
+    #Select related products
+    related_products = Product.query \
+        .filter(Product.category == product.category) \
+        .filter(Product.code != product.code) \
+        .order_by(Product.review_rating.desc()) \
+        .limit(5) \
+        .all()
+    
+    #select recommended products
+    recommended_products = Product.query \
+        .filter(Product.brand == product.brand) \
+        .filter(Product.code != product.code) \
+        .order_by(func.random()) \
+        .limit(5) \
+        .all()
+    
+    return render_template('web-detail.html', product=product, related_products=related_products, recommended_products=recommended_products)

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Footer</title>
+    <title>Web Detail</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,7 +16,8 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../assets/css/style-web-detail.css" />
+    <link rel="stylesheet" href="../static/css/styles-web-detail.css" />
+
   </head>
   <body>
     <header class="header">
@@ -26,18 +27,18 @@
             <div class="web-brief-logo">
               <img
                 class="logo-1"
-                src="../assets//images//brief-icon-1.svg"
+                src="../static//images//brief-icon-1.svg"
                 alt="brief-icon-1"
               />
               <img
                 class="logo-2"
-                src="../assets//images//brief-icon-2.svg"
+                src="../static//images//brief-icon-2.svg"
                 alt="brief-icon-2"
               />
               <div class="logo-3-wrap">
                 <img
                   class="logo-3"
-                  src="../assets//images//brief-icon-3.svg"
+                  src="../static//images//brief-icon-3.svg"
                   alt="brief-icon-3"
                 />
               </div>
@@ -67,19 +68,19 @@
           </div>
           <div class="header-action">
             <div class="action-item">
-              <img src="../assets//images//profile.svg" alt="profile" />
+              <img src="../static//images//profile.svg" alt="profile" />
               <span>Profile</span>
             </div>
             <div class="action-item">
-              <img src="../assets//images//message.svg" alt="message" />
+              <img src="../static//images//message.svg" alt="message" />
               <span>Message</span>
             </div>
             <div class="action-item">
-              <img src="../assets//images//order.svg" alt="Orders" />
+              <img src="../static//images//order.svg" alt="Orders" />
               <span>Orders</span>
             </div>
             <div class="action-item">
-              <img src="../assets//images//cart.svg" alt="Cart" />
+              <img src="../static//images//cart.svg" alt="Cart" />
               <span>My cart</span>
             </div>
           </div>
@@ -92,7 +93,7 @@
         <div class="nav-bar-wrap">
           <div class="nav-left">
             <div class="nav-icon">
-              <img src="../assets//images//navbar.svg" alt="navbar" />
+              <img src="../static//images//navbar.svg" alt="navbar" />
             </div>
             <div class="nav-category">
               <span>All category</span>
@@ -109,16 +110,16 @@
           <div class="nav-payment">
             <div class="nav-payment-current">Vietnam, VND</div>
             <div class="nav-payment-icon">
-              <img src="../assets//images//icon-down.svg" alt="down" />
+              <img src="../static//images//icon-down.svg" alt="down" />
             </div>
           </div>
           <div class="nav-location">
             <div class="nav-location-address">
               <span>Ship to</span>
-              <img src="../assets//images//vn-flag.svg" alt="vn-flag" />
+              <img src="../static//images//vn-flag.svg" alt="vn-flag" />
             </div>
             <div class="nav-payment-icon">
-              <img src="../assets//images//icon-down.svg" alt="down" />
+              <img src="../static//images//icon-down.svg" alt="down" />
             </div>
           </div>
         </div>
@@ -141,78 +142,60 @@
         </div>
     </div>
 
-        <br>
-        <div class="product-container">
-            <div class="image-gallery">
-              <div class="main-image" id="mainImage">
-                <img src="..//assets//images//t-shirt.jpg" alt="Product Image">
-              </div>
-              <div class="thumbnail" onclick="changeImage('..//assets//images//t-shirt.jpg')">
-                <img src="..//assets//images//t-shirt.jpg" alt="Thumbnail 1">
-              </div>
-              <div class="thumbnail" onclick="changeImage('..//assets//images//t-shirt2.jpg')">
-                <img src="..//assets//images//t-shirt2.jpg" alt="Thumbnail 1">
-              </div>
-              <div class="thumbnail" onclick="changeImage('..//assets//images//t-shirt3.jpg')">
-                <img src="..//assets//images//t-shirt3.jpg" alt="Thumbnail 2">
-              </div>
-              <!-- Add more thumbnails as needed -->
+    <br>
+    <div class="product-container">
+        <div class="image-gallery">
+            <div class="main-image" id="mainImage">
+                <img src="{{ url_for('static', filename=product.image_url) }}" alt="{{ product.name }}">
             </div>
-            <div class="product-info">
-                <div class="product-title">Mens Long Sleeve T-shirt Cotton Base Layer Slim Muscle</div>
-                <div class="product-price">$98.00 - $78.00</div>
-                <div class="product-rating">
-                    <div class="rating-stars">
-                    <!-- Assuming 5 stars, use ★ for filled and ☆ for empty -->
-                    ★★★★★
-                    </div>
-                    <div class="rating-score">9.3</div>
-                    <div class="rating-reviews">32 reviews</div>
-                    <div class="rating-sold">154 sold</div>
-                </div>
-              
-                <div class="detail-item">
-                  <strong>Price:</strong> <span>Negotiable</span>
-                </div>
-                <div class="detail-item">
-                  <strong>Type:</strong> <span>Classic shoes</span>
-                </div>
-                <div class="detail-item">
-                  <strong>Material:</strong> <span>Plastic material</span>
-                </div>
-                <div class="detail-item">
-                  <strong>Design:</strong> <span>Modern nice</span>
-                </div>
-                <div class="detail-item">
-                  <strong>Customization:</strong> <span>Customized logo and design custom packages</span>
-                </div>
-                <div class="detail-item">
-                  <strong>Protection:</strong> <span>Refund Policy</span>
-                </div>
-                <div class="detail-item">
-                  <strong>Warranty:</strong> <span>2 years full warranty</span>
-                </div>
-            </div>
-            <div class="product-supplier">
-                <div class="supplier-header">
-                    <span class="supplier-letter">R</span>
-                    <h3 class="supplier-name">Supplier</h3> 
-                    <p class="supplier-company">Guanjoi Trading LLC</p>
-                  </div>
-                  <p class="supplier-location">
-                    <img src="..//assets/images/germany-flag.png" alt="Germany Flag"> Germany, Berlin
-                  </p>
-                  <p class="verified-seller">Verified Seller</p>
-                  <p class="worldwide-shipping">Worldwide shipping</p>
-                  <button class="inquiry-btn">Send inquiry</button>
-                  <button class="profile-btn">Seller's profile</button>
-                  <button class="save-for-later-btn">
-                    <span class="heart-icon">❤</span> <!-- You can replace this with an actual icon -->
-                    Save for later
-                  </button>
-            </div>
-              
+            <!-- Add more thumbnails as needed -->
         </div>
+        <div class="product-info">
+            <div class="product-title">{{ product.name }}</div>
+            <div class="product-price">${{ '%.2f' | format(product.price) }}</div>
+            <div class="product-rating">
+                <div class="rating-stars">
+                    {% for _ in range(product.review_rating|int) %}
+                    ★
+                    {% endfor %}
+                    {% for _ in range(5 - product.review_rating|int) %}
+                    ☆
+                    {% endfor %}
+                </div>
+                <div class="rating-score">{{ product.review_rating }}</div>
+                <div class="rating-reviews">{{ product.review_count }} reviews</div>
+                <div class="rating-sold">{{ product.sold_count }} sold</div>
+            </div>
+          
+            <!-- Product details -->
+            <div class="detail-item">
+                <strong>Price:</strong> <span>${{ '%.2f' | format(product.price) }}</span>
+            </div>
+            <div class="detail-item">
+                <strong>Category:</strong> <span>{{ product.category }}</span>
+            </div>
+            <div class="detail-item">
+                <strong>Quantity:</strong> <span>{{ product.quantity }}</span>
+            </div>
+            <div class="detail-item">
+                <strong>Discount:</strong> <span>{{ product.discount }}%</span>
+            </div>
+            <div class="detail-item">
+                <strong>Brand:</strong> <span>{{ product.brand }}</span>
+            </div>
+            <!-- Add more product details as needed -->
+        </div>
+        <div class="product-supplier">
+            <!-- Supplier information here -->
+            <div class="supplier-header">
+                <!-- Dynamic supplier letter based on company name -->
+                <span class="supplier-letter">{{ product.brand[:1].upper() }}</span>
+                <h3 class="supplier-name">Supplier</h3> 
+                <p class="supplier-company">{{ product.brand }}</p>
+            </div>
+            <!-- Add supplier location and other details if available -->
+        </div>
+    </div>
 
         <br>
         <div class="main-container">
@@ -224,15 +207,7 @@
                   <li>About seller</li>
                 </ul>
                 <div class="tab-content">
-                  <p>Embrace casual comfort with our premium cotton T-shirt, designed for those who appreciate
-                    simplicity paired with style. This classic piece features a soft, breathable
-                    fabric that promises all-day ease and a fit that's neither too snug nor too 
-                    loose. Its versatile heather gray shade serves as a perfect canvas for any 
-                    ensemble, whether layered under a denim jacket or worn solo to showcase its 
-                    subtle finesse. The T-shirt's durable ribbed crew neck and double-stitched 
-                    hem ensure it stands up to the rigors of daily wear while maintaining its
-                    shape. With a slight stretch for mobility, it's an ideal choice for a 
-                    leisurely day out or a relaxed evening in.</p>
+                  <p>{{ product.description }}</p>
                   <table class="styled-table">
                     <thead>
                       <tr>
@@ -269,100 +244,45 @@
             </div>
             
             <div class="recommendations">
-                <h3>You may like</h3>
-                <ul class="product-list">
-                    <!-- Repeat this list item for each recommended product -->
-                    <li class="product">
-                        <img src="..//assets/images/blazer-image.jpg" alt="Men Blazers Sets Elegant Formal">
-                        <div class="product-info">
-                            <span class="product-name">Men Blazers Sets Elegant Formal</span>
-                            <span class="product-price">$7.00 - $99.50</span>
-                        </div>
-                    </li>
-                    <li class="product">
-                        <img src="..//assets/images/car-image.jpg" alt="Maserati-car">
-                        <div class="product-info">
-                            <span class="product-name">Maserati suppercar replica 1:1</span>
-                            <span class="product-price">$7.00 - $99.50</span>
-                        </div>
-                    </li>
-                    <li class="product">
-                        <img src="..//assets/images/shirt-image.jpg" alt="Men Shirt Sleeve Polo Contrast">
-                        <div clas="product-info">
-                            <span class="product-name">Men Shirt Sleeve Polo Contrast</span>
-                            <span class="product-price">$7.00 - $99.50</span>
-                        </div>
-                    </li>
-                    <!-- Additional product items here -->
-                    <li class="product">
-                        <img src="..//assets/images/watch-image.jpg" alt="Apple Watch Series Space Gray">
-                        <div clas="product-info">
-                            <span class="product-name">Apple Watch Series Space Gray</span>
-                            <span class="product-price">$7.00 - $99.50</span>
-                        </div>
-                      </li>
-                      <li class="product">
-                        <img src="..//assets/images/socks-image.jpg" alt="Basketball Crew Socks Long">
-                        <div clas="product-info">
-                            <span class="product-name">Basketball Crew Socks Long</span>
-                            <span class="product-price">$7.00 - $99.50</span>
-                        </div>
-                      </li>
-                      <li class="product">
-                        <img src="..//assets/images/accessories-image.jpg" alt="Stylish Accessory">
-                        <div clas="product-info">
-                            <span class="product-name">Stylish Accessory</span>
-                            <span class="product-price">$15.00 - $45.50</span>
-                        </div>
-                      </li>
-                </ul>
-            </div>
+              <h3>You may like</h3>
+              <ul class="product-list">
+                  {% for rec_product in recommended_products %}
+                  <li class="product">
+                      <img src="{{ url_for('static', filename=rec_product.image_url) }}" alt="{{ rec_product.name }}">
+                      <div class="product-info">
+                          <span class="product-name">{{ rec_product.name }}</span>
+                          <span class="product-price">${{ '%.2f' | format(rec_product.price) }}</span>
+                          <!-- Button for viewing product details -->
+                          <a href="{{ url_for('view_product_detail', product_id=rec_product.code) }}" class="view-detail-btn">View Detail</a>
+                      </div>
+                  </li>
+                  {% else %}
+                  {% endfor %}
+              </ul>
+          </div>
+
         </div>
               
         <br>
         <div class="related-products-container">
-            <h3>Related products</h3>
-            <div class="related-products">
-              <!-- Repeat this block for each product -->
-              <div class="product-card">
-                <img src="..//assets/images/xiaomi-image.jpg" alt="Product Name">
-                <div class="product-info">
-                  <span class="product-name">Xiaomi Redmi 8 Original</span>
-                  <span class="product-price">$32.00 - $40.00</span>
-                </div>
+              <h3>Related products</h3>
+              <div class="related-products">
+                  {% for related_product in related_products %}
+                  <div class="product-card">
+                      <img src="{{ url_for('static', filename=related_product.image_url) }}" alt="{{ related_product.name }}">
+                      <div class="product-info">
+                          <span class="product-name">{{ related_product.name }}</span>
+                          <span class="product-price">${{ '%.2f' | format(related_product.price) }}</span>
+                          <!-- Button for viewing product details -->
+                          <a href="{{ url_for('view_product_detail', product_id=related_product.code) }}" class="view-detail-btn">View Detail</a>
+                      </div>
+                  </div>
+                  {% else %}
+
+                  {% endfor %}
               </div>
-              <!-- ... other product cards ... -->
-              <div class="product-card">
-                <img src="..//assets/images/xiaomi-image.jpg" alt="Product Name">
-                <div class="product-info">
-                  <span class="product-name">Xiaomi Redmi 8 Original</span>
-                  <span class="product-price">$32.00 - $40.00</span>
-                </div>
-              </div>
-              <div class="product-card">
-                <img src="..//assets/images/xiaomi-image.jpg" alt="Product Name">
-                <div class="product-info">
-                  <span class="product-name">Xiaomi Redmi 8 Original</span>
-                  <span class="product-price">$32.00 - $40.00</span>
-                </div>
-              </div>
-              <div class="product-card">
-                <img src="..//assets/images/xiaomi-image.jpg" alt="Product Name">
-                <div class="product-info">
-                  <span class="product-name">Xiaomi Redmi 8 Original</span>
-                  <span class="product-price">$32.00 - $40.00</span>
-                </div>
-              </div>
-              <div class="product-card">
-                <img src="..//assets/images/xiaomi-image.jpg" alt="Product Name">
-                <div class="product-info">
-                  <span class="product-name">Xiaomi Redmi 8 Original</span>
-                  <span class="product-price">$32.00 - $40.00</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          
+        </div>
+
 
         <div class="web-brief">
             <div class="container">
@@ -372,18 +292,18 @@
                     <div class="web-brief-logo">
                       <img
                         class="logo-1"
-                        src="../assets//images//brief-icon-1.svg"
+                        src="../static//images//brief-icon-1.svg"
                         alt="brief-icon-1"
                       />
                       <img
                         class="logo-2"
-                        src="../assets//images//brief-icon-2.svg"
+                        src="../static//images//brief-icon-2.svg"
                         alt="brief-icon-2"
                       />
                       <div class="logo-3-wrap">
                         <img
                           class="logo-3"
-                          src="../assets//images//brief-icon-3.svg"
+                          src="../static//images//brief-icon-3.svg"
                           alt="brief-icon-3"
                         />
                       </div>
@@ -399,22 +319,22 @@
                   </div>
                   <div class="social-media">
                     <span>
-                      <img src="../assets//images//facebook.svg" alt="facebook" />
+                      <img src="../static//images//facebook.svg" alt="facebook" />
                     </span>
                     <span>
-                      <img src="../assets//images//twitter.svg" alt="twitter" />
+                      <img src="../static//images//twitter.svg" alt="twitter" />
                     </span>
                     <span>
-                      <img src="../assets//images/linkedin.svg" alt="linkedin" />
+                      <img src="../static//images/linkedin.svg" alt="linkedin" />
                     </span>
                     <span>
                       <img
-                        src="../assets//images//instagram.svg"
+                        src="../static//images//instagram.svg"
                         alt="instagram"
                       />
                     </span>
                     <span>
-                      <img src="../assets//images//youtube.svg" alt="youtube" />
+                      <img src="../static//images//youtube.svg" alt="youtube" />
                     </span>
                   </div>
                 </div>
@@ -448,12 +368,12 @@
                   <strong class="web-brief-item-title">Get apps</strong>
                   <img
                     class="app"
-                    src="../assets//images/app-store.svg"
+                    src="../static//images/app-store.svg"
                     alt="app-store"
                   />
                   <img
                     class="app"
-                    src="../assets//images/google-play.svg"
+                    src="../static//images/google-play.svg"
                     alt="google-play"
                   />
                 </div>
@@ -469,14 +389,15 @@
               <span>©️ 2023 E-grocery</span>
             </div>
             <div class="footer-right">
-              <img src="../assets/images/us-flag.svg" alt="us-flag" />
+              <img src="../static/images/us-flag.svg" alt="us-flag" />
               <span>English</span>
-              <img src="../assets//images//icon-up.svg" alt="icon-up" />
+              <img src="../static//images//icon-up.svg" alt="icon-up" />
             </div>
           </div>
         </div>
       </footer>
       <!--bootstrap js-->
+      
 
         <script>
             function changeImage(src) {
