@@ -53,12 +53,13 @@
               <div class="categories">
                 <select name="category">
                   <option value="all">All categories</option>
+                  <option value="Smartphones">Smartphones</option>
+                  <option value="Laptop and PC">Laptop and PC</option>
                   <option value="Smart Watch">Smart Watch</option>
-                  <option value="Camera">Camera</option>
-                  <option value="Headphone">Headphone</option>
-                  <option value="Gaming Set">Gaming Set</option>
-                  <option value="Laptop">Laptop</option>
-                  <option value="Tablet">Tablet</option>
+                  <option value="Tablets">Tablets</option>
+                  <option value="Headphones">Headphones</option>
+                  <option value="Cameras">Cameras</option>
+                  
                 </select>
               </div>
               <div class="search-submit">
@@ -126,6 +127,9 @@
       </div>
     </div>
 
+    <!--
+
+
     <hr class="border" />
     <div class="breadcr">
       <div class="container">
@@ -140,7 +144,8 @@
           </nav>
         </div>
       </div>
-    </div>
+    </div>    -->
+
     <div class="list-view">
       <div class="container">
         <div class="list-view-wrap">
@@ -172,24 +177,32 @@
                 <img src="../static//images/icon-up.svg" alt="icon-up" />
               </div>
               <div class="sidebar-brands-item mb-1 flex-and-center">
-                <input type="checkbox" name="brand" value="BrandX" id="brand-1" class="mr-1" />
-                <label for="brand-1" class="gray-600">BrandX</label>
+                <input type="checkbox" name="brand" value="Apple" id="brand-1" class="mr-1" />
+                <label for="brand-1" class="gray-600">Apple</label>
               </div>
               <div class="sidebar-brands-item mb-1 flex-and-center">
-                <input type="checkbox" name="brand" value="BrandY" id="brand-2" class="mr-1" />
-                <label for="brand-2" class="gray-600">BrandY</label>
+                <input type="checkbox" name="brand" value="Samsung" id="brand-2" class="mr-1" />
+                <label for="brand-2" class="gray-600">Samsung</label>
               </div>
               <div class="sidebar-brands-item mb-1 flex-and-center">
-                <input type="checkbox" name="brand"  value="BrandZ" id="brand-3" class="mr-1" />
-                <label for="brand-3" class="gray-600">BrandZ</label>
+                <input type="checkbox" name="brand"  value="Lenovo" id="brand-3" class="mr-1" />
+                <label for="brand-3" class="gray-600">Lenovo</label>
               </div>
               <div class="sidebar-brands-item mb-1 flex-and-center">
-                <input type="checkbox" name="brand" value="BrandA" id="brand-4" class="mr-1" />
-                <label for="brand-4" class="gray-600">BrandA</label>
+                <input type="checkbox" name="brand" value="Sony" id="brand-4" class="mr-1" />
+                <label for="brand-4" class="gray-600">Sony</label>
               </div>
               <div class="sidebar-brands-item mb-1 flex-and-center">
-                <input type="checkbox" name="brand" value="BrandP" id="brand-5" class="mr-1" />
-                <label for="brand-5" class="gray-600">BrandP</label>
+                <input type="checkbox" name="brand" value="Microsoft" id="brand-5" class="mr-1" />
+                <label for="brand-5" class="gray-600">Microsoft</label>
+              </div>
+              <div class="sidebar-brands-item mb-1 flex-and-center">
+                <input type="checkbox" name="brand" value="Xiaomi" id="brand-5" class="mr-1" />
+                <label for="brand-5" class="gray-600">Xiaomi</label>
+              </div>
+              <div class="sidebar-brands-item mb-1 flex-and-center">
+                <input type="checkbox" name="brand" value="Canon" id="brand-5" class="mr-1" />
+                <label for="brand-5" class="gray-600">Canon</label>
               </div>
               <a href="#" class="sidebar-brands-seeAll seeAll">See all</a>
             </div>
@@ -448,13 +461,14 @@
                           <p>{{ product.description }}</p>
                       </div>
                       <div class="content-item-info-details">
-                        <a href="{{ url_for('views.view_product_detail', product_id=product.code) }}">View details</a>
+                        <a href="{{ url_for('views.view_product_detail', product_code=product.code) }}">View details</a>
                       </div>
                   </div>
               </div>
               {% endfor %}
           </div>
 
+          <!--
           <div class="content-pagination">
             <nav aria-label="Page navigation example">
               <ul class="pagination">
@@ -474,7 +488,7 @@
               </ul>
             </nav>
           </div>
-        </div>
+        </div>-->
 
         <div class="web-brief">
           <div class="container">

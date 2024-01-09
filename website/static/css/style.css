@@ -442,6 +442,12 @@ header {
   top: 50px;
   left: 250px;
   margin-top: 15px;
+  padding-bottom: 100px; /* Adjust this value based on the actual height of your footer */
+  width: 900;  
+  height: 650px; 
+  overflow-y: scroll; 
+  border-radius: 5px;
+  
 }
 .sidebar-category {
   display: flex;

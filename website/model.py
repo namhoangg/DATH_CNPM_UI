@@ -14,7 +14,7 @@ class Buyer(db.Model, UserMixin):
     Gender = db.Column(CHAR(1), nullable=False)
     First_Name = db.Column(VARCHAR(30), nullable=False)
     Last_Name = db.Column(VARCHAR(30), nullable=False)
-
+  
     __table_args__ = (
         db.CheckConstraint('LENGTH(Phone_number) BETWEEN 9 AND 10', name='check_phone_length2'),
         db.CheckConstraint("Gender IN ('M', 'F')", name='check_gender2'),

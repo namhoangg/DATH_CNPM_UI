@@ -5,7 +5,7 @@ from flask_login import login_user, login_required, logout_user, current_user
 from sqlalchemy import or_, func
 from .model import Buyer, Product
 from . import db
-
+  
 views = Blueprint('views', __name__)
 
 @views.route('/')
@@ -62,9 +62,9 @@ def apply_filters():
     products = query.all()
     return render_template('list-view.html', products=products)
 
-@views.route('/product/<int:product_id>')
-def view_product_detail(product_id):
-    product = Product.query.get_or_404(product_id)
+@views.route('/product/<int:product_code>')
+def view_product_detail(product_code):
+    product = Product.query.get_or_404(product_code)
 
     #Select related products
     related_products = Product.query \
